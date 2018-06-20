@@ -195,7 +195,7 @@ public class IndicatorSeekBar extends View {
         mBackgroundTrackColor = ta.getColor(R.styleable.IndicatorSeekBar_isb_track_background_color, builder.trackBackgroundColor);
         mProgressTrackColor = ta.getColor(R.styleable.IndicatorSeekBar_isb_track_progress_color, builder.trackProgressColor);
         mTrackRoundedCorners = ta.getBoolean(R.styleable.IndicatorSeekBar_isb_track_rounded_corners, builder.trackRoundedCorners);
-        mProgressTrackShadowEnable = ta.getBoolean(R.styleable.IndicatorSeekBar_isb_track_progress_shadow_enable, builder.trackShadowEnable);
+        mProgressTrackShadowEnable = ta.getBoolean(R.styleable.IndicatorSeekBar_isb_track_shadow_enable, builder.trackShadowEnable);
         //thumb
         mThumbSize = ta.getDimensionPixelSize(R.styleable.IndicatorSeekBar_isb_thumb_size, builder.thumbSize);
         mThumbDrawable = ta.getDrawable(R.styleable.IndicatorSeekBar_isb_thumb_drawable);

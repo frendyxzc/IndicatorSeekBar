@@ -31,7 +31,7 @@
         <attr name="isb_track_progress_size" format="dimension|reference" /><!-- set indicatorSeekBar's track progress bar size, default 2dp-->
         <attr name="isb_track_progress_color" format="color|reference" /><!-- set indicatorSeekBar's track progress bar color, default #FF4081-->
         <attr name="isb_track_rounded_corners" format="boolean" /><!-- set the track's both ends' shape to round-->
-        <attr name="isb_track_progress_shadow_enable" format="boolean" />
+        <attr name="isb_track_shadow_enable" format="boolean" />
         //thumb text
         <attr name="isb_thumb_text_color" format="color|reference" /><!--set thumb's color, default #FF4081-->
         <attr name="isb_show_thumb_text" format="boolean" /><!--show thumb text or not, default false-->
