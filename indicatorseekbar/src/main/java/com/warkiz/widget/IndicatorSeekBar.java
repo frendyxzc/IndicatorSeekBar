@@ -6,6 +6,7 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
@@ -121,6 +122,7 @@ public class IndicatorSeekBar extends View {
     private int mProgressTrackColor;
     private int[] mSectionTrackColorArray;//save the color for each section tracks.
     private boolean mCustomTrackSectionColorResult;//true to confirm to custom the section track color
+    private boolean mProgressTrackShadowEnable = false;
     //thumb
     private float mThumbRadius;//the thumb's radius
     private float mThumbTouchRadius;//the thumb's radius when touching
@@ -193,6 +195,7 @@ public class IndicatorSeekBar extends View {
         mBackgroundTrackColor = ta.getColor(R.styleable.IndicatorSeekBar_isb_track_background_color, builder.trackBackgroundColor);
         mProgressTrackColor = ta.getColor(R.styleable.IndicatorSeekBar_isb_track_progress_color, builder.trackProgressColor);
         mTrackRoundedCorners = ta.getBoolean(R.styleable.IndicatorSeekBar_isb_track_rounded_corners, builder.trackRoundedCorners);
+        mProgressTrackShadowEnable = ta.getBoolean(R.styleable.IndicatorSeekBar_isb_track_progress_shadow_enable, builder.trackShadowEnable);
         //thumb
         mThumbSize = ta.getDimensionPixelSize(R.styleable.IndicatorSeekBar_isb_thumb_size, builder.thumbSize);
         mThumbDrawable = ta.getDrawable(R.styleable.IndicatorSeekBar_isb_thumb_drawable);
@@ -306,6 +309,9 @@ public class IndicatorSeekBar extends View {
             mStockPaint.setStrokeCap(Paint.Cap.ROUND);
         }
         mStockPaint.setAntiAlias(true);
+        if (mProgressTrackShadowEnable) {
+            mStockPaint.setShadowLayer(4, 0, 4, Color.argb(80, 0, 0, 0));
+        }
         if (mBackgroundTrackSize > mProgressTrackSize) {
             mProgressTrackSize = mBackgroundTrackSize;
         }

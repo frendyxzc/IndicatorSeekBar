@@ -42,6 +42,7 @@ public class Builder {
     int trackProgressSize = 0;
     int trackProgressColor = Color.parseColor("#FF4081");
     boolean trackRoundedCorners = false;
+    boolean trackShadowEnable = false;
     //thumbText
     int thumbTextColor = Color.parseColor("#FF4081");
     boolean showThumbText = false;

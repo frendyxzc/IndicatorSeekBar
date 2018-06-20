@@ -44,6 +44,7 @@
                 android:id="@+id/scale"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layerType="software"
                 app:isb_max="1"
                 app:isb_min="-2"
                 app:isb_progress="-1.1982"
@@ -51,7 +52,8 @@
                 app:isb_show_indicator="rectangle"
                 app:isb_thumb_color="@color/color_blue"
                 app:isb_thumb_text_color="@color/color_pink"
-                app:isb_track_progress_color="@color/color_blue" />
+                app:isb_track_progress_color="@color/color_blue"
+                app:isb_track_progress_shadow_enable="true"/>
         </com.warkiz.widget.IndicatorStayLayout>
 
         <TextView
@@ -68,6 +70,7 @@
                 android:id="@+id/percent_indicator"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layerType="software"
                 app:isb_indicator_color="@color/color_blue"
                 app:isb_progress="76"
                 app:isb_show_indicator="rectangle"
